@@ -1,27 +1,17 @@
 # interview-task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0-rc.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5
 
-## Development server
+## Outline 
+This project contains a basic application to create reusable checklists e.g. for holiday packing lists. It allows you to create a list and add items to a list. Furthermore, basic functionality like editing and deleting lists and items are available. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Angular CLI
 
-## Code scaffolding
-
+Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Tasks
+- Implement a functionality that allows you to add tags to a list, like "Holiday".
+- Implement a search to retrieve lists that contain the search expression in the title.
+- Implement a sort function for the list items. Lists items shall be ordered according to a custom priority number that can be assigned on creation or edit. If two items have the same priority they shall be sorted alphabetically. Items that have no assigned priority come at the end.
+- Add a basic styling for the application.
