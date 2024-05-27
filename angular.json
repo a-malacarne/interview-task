@@ -65,12 +65,16 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "ssl": true,
+            "buildTarget": "quicklists-interview-task:build"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "quicklists-interview-task:build:production"
+              "buildTarget": "quicklists-interview-task:build:production"
             },
             "development": {
-              "browserTarget": "quicklists-interview-task:build:development"
+              "buildTarget": "quicklists-interview-task:build:development"
             }
           },
           "defaultConfiguration": "development"
