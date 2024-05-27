@@ -1,10 +1,7 @@
 <ul>
-  @for (checklist of checklists; track checklist.id){
+  @for (checklist of checklists(); track checklist.id){
   <li data-testid="checklist-item">
-    <a
-      routerLink="/checklist/{{ checklist.id }}"
-      data-testid="checklist-link"
-    >
+    <a routerLink="/checklist/{{ checklist.id }}" data-testid="checklist-link">
       {{ checklist.title }}
     </a>
     <div>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Checklist } from 'src/app/shared/interfaces/checklist';
 
@@ -11,7 +11,7 @@ import { Checklist } from 'src/app/shared/interfaces/checklist';
   imports: [CommonModule, RouterModule],
 })
 export class ChecklistListComponent {
-  @Input({ required: true }) checklists!: Checklist[];
-  @Output() delete = new EventEmitter<string>();
-  @Output() edit = new EventEmitter<Checklist>();
+  checklists = input.required<Checklist[]>();
+  delete = output<string>();
+  edit = output<Checklist>();
 }

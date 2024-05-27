@@ -1,6 +1,6 @@
 <section>
   <ul>
-    @for (item of checklistItems; track item.id){
+    @for (item of checklistItems(); track item.id){
     <li data-testid="checklist-item">
       <div>
         @if (item.checked){

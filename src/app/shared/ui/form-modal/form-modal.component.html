@@ -1,18 +1,13 @@
-
 <header>
-  <h2>{{ title }}</h2>
+  <h2>{{ title() }}</h2>
   <button (click)="close.emit()">close</button>
 </header>
 <section>
-  <form [formGroup]="formGroup" (ngSubmit)="save.emit(); close.emit()">
-    @for (control of formGroup.controls | keyvalue; track control.key){
+  <form [formGroup]="formGroup()" (ngSubmit)="save.emit(); close.emit()">
+    @for (control of formGroup().controls | keyvalue; track control.key){
     <div>
       <label [for]="control.key">{{ control.key }}</label>
-      <input
-        [id]="control.key"
-        type="text"
-        [formControlName]="control.key"
-      />
+      <input [id]="control.key" type="text" [formControlName]="control.key" />
     </div>
     }
     <button type="submit" data-testid="save-checklist-button">Save</button>
